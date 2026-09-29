@@ -44,4 +44,4 @@ builderがapplication runtimeやhostingを囲い込まず、**design intentをpo
 
 ## 状態
 
-2026-09-29: local working prototype。GitHub repositoryとpublic demoは未作成です。
+2026-09-29: public working prototype。GitHub repositoryは`yuQio-dev/visual-page-builder`、public demoは未deployです。
