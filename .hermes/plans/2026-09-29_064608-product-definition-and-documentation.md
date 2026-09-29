@@ -103,7 +103,7 @@
 | Browser demo | canvas操作のみ。mock AIも実APIも置かない | Accepted |
 | Browser sample | Desktop 1440の架空SaaS landing page | Accepted |
 | Browser export | sampleを編集し、Vite appをdownload可能 | Accepted |
-| Demo hosting | Cloudflare Pages | Accepted。deploy自体は別承認 |
+| Demo hosting | Cloudflare Pagesのgenerated `*.pages.dev` URLを使用。custom domainは購入しない | Accepted。deploy自体は別承認 |
 | Demo analytics | browser demoでuser consent後にCloudflare Web Analyticsを有効化。desktop telemetryは入れない | Accepted |
 | Analytics retention | Cloudflare dashboardの最大6か月のみ。aggregate snapshotを別保存しない | Accepted |
 | Privacy notice | 非blocking bannerで`Accept` / `Continue without analytics`を同じ強さで表示。選択前・拒否時はanalyticsを読み込まない | Accepted |
@@ -119,10 +119,10 @@
 | Feedback | Discussions = 要望・作品、Issues = bug | Accepted |
 | Naming | 検索可能な英数字造語 | Accepted。短い英語造語だけに限定する案をSuperseded |
 | Naming deadline | browser demo公開の2週間前 | Accepted |
-| Name availability | GitHub / X / domain / npmを確認 | Accepted |
+| Name availability | GitHub / X / npm / Cloudflare Pages project slugを確認 | Accepted |
 | Naming priority | 検索時の固有性・同名競合の少なさ | Accepted |
 | Naming process | 候補調査後に`Lay4Canvas`へ決定 | Completed |
-| Canonical domain | 取得可否と価格を確認するまで`.com` / `.dev`の選択を保留 | Accepted。domain購入は別承認 |
+| Canonical URL | MVPではCloudflare Pagesのgenerated `*.pages.dev` URLを使用。paid custom domainは取得しない | Accepted。`.com` / `.dev`購入案をSuperseded |
 | X handle condition | exact match、`get<name>`、`<name>app`のいずれかを許容 | Accepted |
 | npm package | unscoped `lay4canvas`を第一候補とし、登録できない場合だけ`@yuqio-dev/lay4canvas`を使用 | Accepted |
 | Repository identity | public repoを`yuQio-dev/lay4canvas`、local directoryを`/home/nyanb/projects/lay4canvas`へrename | Completed 2026-09-29 |
@@ -560,7 +560,7 @@ Public assets:
 
 - 日本語中心のX動画/post
 - 日英併記README
-- Cloudflare Pagesのcanvas-only demo。Desktop 1440の架空SaaS landing pageを初期sampleにする
+- Cloudflare Pagesのgenerated `*.pages.dev` URLで提供するcanvas-only demo。Desktop 1440の架空SaaS landing pageを初期sampleにし、custom domainは購入しない
 - browser demoで初回privacy noticeを表示し、明示同意が得られるまでCloudflare Web Analytics scriptを読み込まない
 - noticeは非blocking bannerとし、`Accept`と`Continue without analytics`を同じvisual priorityで表示する
 - demo機能は未選択・拒否時も制限せず、consent preferenceだけをlocalStorageへ保存する
@@ -658,8 +658,8 @@ Expected:
 
 blocking verify questionは解消済み。
 
-- canonical domainは取得可否と価格の確認まで意図的に保留し、documentation gateのblockerにはしない。
-- domain購入、X handle取得、npm publishは外部状態・費用・公開を伴うため、実行前に個別承認を得る。
+- paid custom domainは購入せず、MVP browser demoにはCloudflare Pagesのgenerated `*.pages.dev` URLを使用する。
+- X handle取得、npm publish、Cloudflare Pages deployは外部状態・公開を伴うため、実行前に個別承認を得る。
 
 
 ## 7. Definition of Done
