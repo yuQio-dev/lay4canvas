@@ -1,8 +1,8 @@
-# Visual Page Builder
+# Lay4Canvas
 
-FlutterFlowのvisual authoringとportable codeの考え方を参考にしつつ、**AI coding agentへ渡せる設計意図（intent）を成果物として残す**ことに焦点を当てたlocal-first page builderです。
+**Lay4Canvas（レイフォーキャンバス）**は、visual authoringとportable codeの考え方を参考にしつつ、**AI coding agentへ渡せる設計意図（intent）を成果物として残す**ことに焦点を当てたlocal-first page builderです。
 
-Working titleです。既存製品の名称、UI asset、codeは複製しません。
+既存製品の名称、UI asset、codeは複製しません。
 
 ## 現在できること
 
@@ -33,9 +33,9 @@ npm run build
 
 FlutterFlowのようなfull app platformを最初から再現しません。最初の楔は次の一経路です。
 
-1. visual canvasでresponsive pageを構成する
+1. visual canvasで選択した一つのtarget viewport向けpageを構成する
 2. 操作を明示的なlayout constraintへ変換する
-3. JSON、agent brief、将来はReact sourceへexportする
+3. 現prototypeではJSONとagent brief、MVPではVite React appへexportする
 4. 既存repository側で実装・レビューできる
 
 builderがapplication runtimeやhostingを囲い込まず、**design intentをportableにする**ことを独自性とします。
@@ -44,4 +44,4 @@ builderがapplication runtimeやhostingを囲い込まず、**design intentをpo
 
 ## 状態
 
-2026-09-29: public working prototype。GitHub repositoryは`yuQio-dev/visual-page-builder`、public demoは未deployです。
+2026-09-29: public working prototype。GitHub repositoryは`yuQio-dev/lay4canvas`、public demoは未deployです。正典文書とADRが承認されるまで、新機能実装は凍結しています。

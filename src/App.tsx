@@ -12,7 +12,8 @@ import {
 } from './model'
 import './App.css'
 
-const STORAGE_KEY = 'visual-page-builder:document:v1'
+const STORAGE_KEY = 'lay4canvas:document:v1'
+const LEGACY_STORAGE_KEY = 'visual-page-builder:document:v1'
 const viewportWidths: Record<Viewport, number> = {
   desktop: 1120,
   tablet: 760,
@@ -29,6 +30,7 @@ function loadDocument(): PageDocument {
   const starter = createStarterDocument()
   try {
     const stored = window.localStorage.getItem(STORAGE_KEY)
+      ?? window.localStorage.getItem(LEGACY_STORAGE_KEY)
     if (!stored) return starter
 
     const parsed = JSON.parse(stored) as Omit<Partial<PageDocument>, 'blocks'> & {
@@ -147,10 +149,10 @@ function App() {
   return (
     <main className="builder-shell">
       <header className="topbar">
-        <div className="brand-lockup" aria-label="Visual Page Builder">
-          <span className="brand-mark" aria-hidden="true">VP</span>
+        <div className="brand-lockup" aria-label="Lay4Canvas">
+          <span className="brand-mark" aria-hidden="true">L4</span>
           <div>
-            <strong>Visual Page Builder</strong>
+            <strong>Lay4Canvas</strong>
             <span>Working prototype</span>
           </div>
         </div>
