@@ -1,0 +1,64 @@
+@import '@fontsource-variable/manrope';
+@import '@fontsource/ibm-plex-mono/400.css';
+
+:root {
+  font-family: 'Manrope Variable', sans-serif;
+  color: #f2f1eb;
+  background: #151819;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --shell: #151819;
+  --panel: #1c2021;
+  --panel-raised: #24292a;
+  --line: #343a39;
+  --line-soft: #292e2e;
+  --paper: #f1ede3;
+  --paper-ink: #1f2523;
+  --muted: #9ca4a0;
+  --muted-strong: #c2c7c3;
+  --accent: #ff7657;
+  --accent-soft: #3b2924;
+  --focus: #ffd2c7;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--shell);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+[role='button']:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+::selection {
+  color: #201511;
+  background: #ffb7a6;
+}
